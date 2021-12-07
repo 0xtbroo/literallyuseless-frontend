@@ -1,14 +1,14 @@
 import Head from 'next/head';
-import Button from 'react-bootstrap/Button';
-import 'bootstrap/dist/css/bootstrap.min.css';
 
 export default function Home() {
   return (
     <div>
       <Head>
-        <title>Literally Useless Coin</title>
+      <link rel="preconnect" href="https://fonts.googleapis.com"/>
+      <link rel="preconnect" href="https://fonts.gstatic.com" crossOrigin/>
+      <link href="https://fonts.googleapis.com/css2?family=Press+Start+2P&family=VT323&display=swap" rel="stylesheet"/>
+      <title>Literally Useless Coin</title>
       </Head>
-      <Button variant="outline-primary">Test</Button>
     </div>
   )
 }
