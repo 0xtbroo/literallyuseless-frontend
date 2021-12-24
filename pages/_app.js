@@ -5,18 +5,20 @@ import PriceBadge from '../components/price-badge';
 
 function MyApp({ Component, pageProps }) {
   return (
-    <div>
-      <div className="2xl:container p-4 mx-auto">
-        <Navbar.Brand className="flex items-center" href="/">
+    <div className="p-8">
+      <div className="flex items-center">
+        <div className="flex items-center" href="/">
           <Image src="/literallyuseless.png" width="96" hegiht="96" className="pixelated" alt=""/>
           <div className="ml-2 leading-4">
-            <h1 className="items-center text-4xl tracking-tight font-bold text-grimeGreen">literally useless</h1>
-            <p>$LITTY</p>
+            <h1 className="items-center text-4xl tracking-tight font-bold text-gray-400">literally useless</h1>
+            <p className=" text-grimeGreen">$LITTY</p>
           </div>
-          <PriceBadge></PriceBadge>
-        </Navbar.Brand>
-        <Component {...pageProps} />
+        </div>
+        <div className="ml-8">
+          <PriceBadge ></PriceBadge>
+        </div>
       </div>
+      <Component {...pageProps} />
     </div>
   )
 }

@@ -4,14 +4,13 @@ export default class PriceBadge extends React.Component {
 
     LITTY_ADDRESS = '0x00a1f22156A6dbf56C9e9cb16Ec63B0F9Ba94ad7';
     USD_API = 'https://api.traderjoexyz.com/priceusd/0x00a1f22156A6dbf56C9e9cb16Ec63B0F9Ba94ad7';
+    LITTY_AVAX_TRADE = 'https://traderjoexyz.com/#/trade?inputCurrency=&outputCurrency=0x00a1f22156A6dbf56C9e9cb16Ec63B0F9Ba94ad7';
 
     constructor(props) {
         super(props);
         this.state = {
             price: 0,
         }
-        this.updatePrice();
-
         setInterval(this.updatePrice.bind(this), 1000); 
     }
 
@@ -26,9 +25,9 @@ export default class PriceBadge extends React.Component {
 
     render() {
         return (
-            <div className="rounded-md bg-red p-4">
+            <a href={this.LITTY_AVAX_TRADE} className="rounded-lg  text-gray-200 bg-sewageGreen p-2">
                 {`$${this.state.price}`}
-            </div>
+            </a>
         );
     }
 }
