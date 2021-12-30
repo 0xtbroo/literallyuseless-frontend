@@ -1,4 +1,5 @@
 import React from "react";
+import Loader from "./loader";
 
 export default class PriceBadge extends React.Component {
 
@@ -10,24 +11,33 @@ export default class PriceBadge extends React.Component {
         super(props);
         this.state = {
             price: 0,
+            loading: true,
         }
         setInterval(this.updatePrice.bind(this), 1000); 
     }
 
     async updatePrice() {
-        //const LITTY = await Fetcher.fetchTokenData(ChainId.AVALANCHE, this.LITTY__ADDRESS);
-        const priceUSD = (parseFloat(await (await fetch(this.USD_API)).text()) / 1000000000000000000).toFixed(7);
-        this.setState({price: priceUSD})
-        //const LITTY_MIM = await Fetcher.fetchPairData(LITTY, MIM);
-
-       // const route = new Route([])
+        let token_price;
+        try {
+            token_price = (parseFloat(await (await fetch(this.USD_API)).text()) / 1000000000000000000).toFixed(7);
+        } catch (err) {
+            console.error(err);
+            return;
+        }
+        this.setState({price: token_price, loading: false})
     }
 
     render() {
         return (
-            <a href={this.LITTY_AVAX_TRADE} className="rounded-lg  text-gray-200 bg-sewageGreen p-2">
-                {`$${this.state.price}`}
-            </a>
+            <div>
+                { this.state.loading ? 
+                    <Loader/>
+                    : 
+                    <a href={this.LITTY_AVAX_TRADE} title="Click to buy $LITTY" rel="noreferrer" className="font-bold rounded-full text-gray-200 bg-highlight text-secondary py-3 px-4" target="_blank">
+                        {`$${this.state.price}`}
+                    </a>
+                }
+            </div>
         );
     }
 }

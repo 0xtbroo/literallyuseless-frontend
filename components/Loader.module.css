@@ -1,0 +1,13 @@
+.loader {
+    border: 9px solid theme('colors.primary');
+    border-top: 9px solid theme('colors.background');
+    border-radius: 50%;
+    width: 45px;
+    height: 45px;
+    animation: spin 0.75s linear infinite;
+  }
+  
+  @keyframes spin {
+    0% { transform: rotate(0deg); }
+    100% { transform: rotate(360deg); }
+  }

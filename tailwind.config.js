@@ -4,8 +4,16 @@ module.exports = {
   theme: {
     extend: {
       colors: {
-        'sewageGreen': '#00602E',
-        'grimeGreen': '#007739',
+        primary: '#ADD1A7',
+        secondary: '#3B6F33',
+        highlight: '#92C989',
+        neutral: '#5E5E5E',
+        dark: '#383838',
+        background: '#F9FFF8',
+      },
+      fontFamily: {
+        primary: ['Comic Neue, sans-serif'],
+        secondary: [''],
       }
 
     },

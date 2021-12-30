@@ -1,21 +1,24 @@
 import '../styles/globals.css'
-import Navbar from 'react-bootstrap/Navbar'
 import Image from 'react-bootstrap/Image';
 import PriceBadge from '../components/price-badge';
+import Link from 'next/link';
 
 function MyApp({ Component, pageProps }) {
   return (
-    <div className="p-8">
-      <div className="flex items-center">
-        <div className="flex items-center" href="/">
-          <Image src="/literallyuseless.png" width="96" hegiht="96" className="pixelated" alt=""/>
-          <div className="ml-2 leading-4">
-            <h1 className="items-center text-4xl tracking-tight font-bold text-gray-400">literally useless</h1>
-            <p className=" text-grimeGreen">$LITTY</p>
+    <div className="mt-4 px-4 mx-auto md:container">
+      <div className="flex items-center justify-between">
+        <a href="/" className="flex items-center">
+          <Image src="/literallyuseless.png" width="64" height="64" className="pixelated" alt=""/>
+          <div className="leading-4">
+            <h1 style={{"width": "20px"}} className="leading-5 items-center text-2xl tracking-tight font-bold text-dark">literally useless</h1>
           </div>
-        </div>
-        <div className="ml-8">
-          <PriceBadge ></PriceBadge>
+        </a>
+        <div className='flex flex-row items-center space-x-8'>
+          <a className='text-neutral' href='our-team'>earn $LITTY</a>
+          <a className='text-neutral' href='our-team'>mission statement</a>
+          <a className='text-neutral' href='our-team'>our team</a>
+          <a className='text-dark font-bold' target='_blank' rel="noreferrer" href='https://snowtrace.io/address/0x00a1f22156A6dbf56C9e9cb16Ec63B0F9Ba94ad7'>contract</a>
+          <PriceBadge></PriceBadge>
         </div>
       </div>
       <Component {...pageProps} />
