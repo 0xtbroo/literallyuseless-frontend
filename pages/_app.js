@@ -1,17 +1,20 @@
 import '../styles/globals.css'
 import Image from 'react-bootstrap/Image';
 import PriceBadge from '../components/price-badge';
+import Link from 'next/link';
 
 function MyApp({ Component, pageProps }) {
   return (
     <div className="pt-4 px-6 mx-auto lg:container flex flex-col">
       <header className="flex items-center justify-between flex-0">
-        <a href="/" className="flex items-center">
-          <Image src="/literallyuseless.png" width="64" height="64" className="pixelated" alt="Literally Useless Logo"/>
-          <div className="leading-4">
-            <h1 style={{"width": "20px"}} className="leading-4 items-center text-xl tracking-tight font-bold text-dark">literally useless</h1>
-          </div>
-        </a>
+        <Link href="/">
+          <a className="flex items-center">
+            <Image src="/literallyuseless.png" width="64" height="64" className="pixelated" alt="Literally Useless Logo"/>
+            <div className="leading-4">
+              <h1 style={{"width": "20px"}} className="leading-4 items-center text-xl tracking-tight font-bold text-dark">literally useless</h1>
+            </div>
+          </a>
+        </Link>
         <div className='flex flex-row items-center space-x-8'>
           <a className='text-neutral hover-underline-animation cursor-pointer' onClick={() => {
 
@@ -31,7 +34,11 @@ function MyApp({ Component, pageProps }) {
           </a>
         </div>
         <div className='w-full flex space-x-4 justify-center  text-neutral'>
-          <a className=' text-md hover-underline-animation' href="/">contact</a>
+          <Link href="/">
+            <a className='text-md hover-underline-animation'>
+              contact
+            </a>
+          </Link>
         </div>
         <div className='fixed' style={{"transform": "rotate(20deg)", left: "-80px", bottom:"-80px"}}>
           <Image src="/landfill.png" alt="pile of trash"></Image>
