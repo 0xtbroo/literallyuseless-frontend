@@ -21,5 +21,10 @@
     "eslint-config-next": "12.0.7",
     "postcss": "^8.4.4",
     "tailwindcss": "^2.2.19"
-  }
+  },
+  "version": "1.0.0",
+  "main": "index.js",
+  "repository": "git@github.com:sagefarrenholz/literallyuseless-site.git",
+  "author": "sagefarrenholz <46610156+sagefarrenholz@users.noreply.github.com>",
+  "license": "MIT"
 }

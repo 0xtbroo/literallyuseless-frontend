@@ -10,14 +10,14 @@ function MyApp({ Component, pageProps }) {
         <a href="/" className="flex items-center">
           <Image src="/literallyuseless.png" width="64" height="64" className="pixelated" alt=""/>
           <div className="leading-4">
-            <h1 style={{"width": "20px"}} className="leading-5 items-center text-2xl tracking-tight font-bold text-dark">literally useless</h1>
+            <h1 style={{"width": "20px"}} className="leading-4 items-center text-xl tracking-tight font-bold text-dark">literally useless</h1>
           </div>
         </a>
         <div className='flex flex-row items-center space-x-8'>
-          <a className='text-neutral' href='our-team'>earn $LITTY</a>
-          <a className='text-neutral' href='our-team'>mission statement</a>
-          <a className='text-neutral' href='our-team'>our team</a>
-          <a className='text-dark font-bold' target='_blank' rel="noreferrer" href='https://snowtrace.io/address/0x00a1f22156A6dbf56C9e9cb16Ec63B0F9Ba94ad7'>contract</a>
+          <a className='text-neutral hover-underline-animation' href='our-team'>earn $LITTY</a>
+          <a className='text-neutral hover-underline-animation' href='our-team'>mission statement</a>
+          <a className='text-neutral hover-underline-animation' href='our-team'>our team</a>
+          <a className='text-dark font-bold hover-underline-animation' target='_blank' rel="noreferrer" href='https://snowtrace.io/address/0x00a1f22156A6dbf56C9e9cb16Ec63B0F9Ba94ad7'>contract</a>
           <PriceBadge></PriceBadge>
         </div>
       </div>
