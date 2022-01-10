@@ -1,5 +1,5 @@
 import React from "react";
-import Loader from "./loader";
+import Loader from "../loader";
 
 export default class PriceBadge extends React.Component {
 

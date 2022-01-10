@@ -13,7 +13,7 @@ module.exports = {
       },
       fontFamily: {
         primary: ['Comic Neue, sans-serif'],
-        secondary: [''],
+        secondary: ['Coming Soon, serif'],
       }
 
     },

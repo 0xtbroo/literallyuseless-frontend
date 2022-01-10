@@ -6,8 +6,8 @@ export default function Home() {
       <Head>
         <title>literally useless</title>
       </Head>
-      <div className="mt-8">
-        <h1>A Literally Useless coin<br/>for litterally useless people</h1>
+      <div className="mt-8 flex items-center mt-64" >
+        <h1 className="font-secondary text-dark text-6xl">$LITTY</h1>
       </div>
     </div>
   )
