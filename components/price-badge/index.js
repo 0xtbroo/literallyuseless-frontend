@@ -33,7 +33,7 @@ export default class PriceBadge extends React.Component {
                 { this.state.loading ? 
                     <Loader/>
                     : 
-                    <a href={this.LITTY_AVAX_TRADE} title="Click to buy $LITTY" rel="noreferrer" className="pop-animation  font-bold rounded-full text-gray-200 bg-highlight text-secondary py-3 px-4" target="_blank">
+                    <a href={this.LITTY_AVAX_TRADE} title="Click to buy $LITTY" rel="noreferrer" className="pop-animation  font-bold rounded-full bg-highlight text-secondary py-3 px-4" target="_blank">
                         {`$${this.state.price}`}
                     </a>
                 }
