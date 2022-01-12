@@ -1,15 +1,16 @@
 import Head from 'next/head';
 import UselessButton from '../components/useless-button';
-import Image from 'next/image';
+import Script from 'next/script';
 
 export default function Home() {
   return (
-    <main className="flex items-center h-full static items-center space-x-48 justify-center">
+    <main className="flex items-center h-full static items-center justify-evenly">
+      <Script type="module" src="https://unpkg.com/@google/model-viewer/dist/model-viewer.min.js"></Script>
       <Head>
         <title>literally useless</title>
         <meta name="description" content="Literally Useless Coin"></meta>
       </Head>
-      <div>
+      <div className='p-2 min-w-100'>
         <h1 className="font-secondary text-dark text-8xl mb-4">$LITTY</h1>
         <h2 className='text-neutral font-secondary text-4xl'>
           A useless coin,<br/>for useless people
@@ -21,12 +22,9 @@ export default function Home() {
         </div>
       </div>
       <figure>
-        <a href="https://help.endhomelessness.org/donate/" className='blur-edges-bg'>
-          <Image src="/homeless.jpeg" width="800px" height="600px" alt="Homeless guy happy"></Image>
-        </a>
-        <figcaption className='text-center text-neutral italics mt-2'>
-          this could be you!
-        </figcaption>
+        <model-viewer style={{width:"500px",height:"600px"}} loading="eager" auto-rotate-delay="1000" camera-orbit="0 65deg 0"
+          interaction-prompt="none" rotation-per-second="200%" camera-controls auto-rotate environment-image="neutral" 
+          disable-zoom shadow-intensity="0.6" src="/litty_voxel.glb"></model-viewer>
       </figure>
     </main>
   )

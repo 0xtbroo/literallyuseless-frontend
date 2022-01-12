@@ -503,6 +503,11 @@
   resolved "https://registry.yarnpkg.com/@firebase/webchannel-wrapper/-/webchannel-wrapper-0.4.0.tgz#becce788818d3f47f0ac1a74c3c061ac1dcf4f6d"
   integrity sha512-8cUA/mg0S+BxIZ72TdZRsXKBP5n5uRcE3k29TZhZw6oIiHBt9JA7CTb/4pE1uKtE/q5NeTY2tBDcagoZ+1zjXQ==
 
+"@google/model-viewer@^1.9.2":
+  version "1.9.2"
+  resolved "https://registry.yarnpkg.com/@google/model-viewer/-/model-viewer-1.9.2.tgz#aa57d36b172a16622ce27397dc0250670160ff86"
+  integrity sha512-bFn6TJPvPHZDPQ0vYOx1O57A5t4cVjpxaYyYeq2OqOpbZ6+Rkq1PLdyYx8Do7Id1ZPr6WqOaIAxajZ7Jy56G/g==
+
 "@grpc/grpc-js@^1.0.0":
   version "1.5.0"
   resolved "https://registry.yarnpkg.com/@grpc/grpc-js/-/grpc-js-1.5.0.tgz#fa0ca3170d7544aa89db6f64f7b4778603d0a786"
