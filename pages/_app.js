@@ -41,20 +41,25 @@ function App({ Component, pageProps }) {
           </a>
         </Link>
         <div className='flex flex-row items-center space-x-8'>
-          <a className='text-neutral hover-underline-animation cursor-pointer' onClick={addIconWallet}>add to Metamask</a>
-          <a className='text-neutral hover-underline-animation' target='_blank' rel="noreferrer" href='https://snowtrace.io/address/0x00a1f22156A6dbf56C9e9cb16Ec63B0F9Ba94ad7'>contract</a>
           <PriceBadge></PriceBadge>
         </div>
       </header>
       <Component {...pageProps} />
       <footer className="w-full left-0 bottom-0 py-4 flex-0">
         <div className='w-full flex space-x-4 mb-2 justify-center items-center'>
-          <a className='z-10 w-10 h-10 ' href=''>
+          <a className='z-10 w-10 h-10 ' href='https://discord.gg/hTJJQXyMUZ' target='_blank' rel="noreferrer">
             <Image src="/discord.png" alt="discord logo"></Image>
           </a>
-          <a className='z-10 w-10 h-10 ' href=''>
+          <a className='z-10 w-10 h-10 ' href='https://twitter.com/error_litty' target='_blank' rel="noreferrer">
             <Image src="/twitter.png" alt="twitter logo"></Image>
           </a>
+        </div>
+        <div className='w-full flex space-x-4 justify-center items-center'>
+          <a className='text-neutral hover-underline-animation' target='_blank' rel="noreferrer" href='https://snowtrace.io/address/0x00a1f22156A6dbf56C9e9cb16Ec63B0F9Ba94ad7'>contract</a>
+          <p>|</p>
+          <a className='text-neutral hover-underline-animation' target='_blank' rel="noreferrer" href='https://traderjoexyz.com/#/trade?inputCurrency=&outputCurrency=0x00a1f22156A6dbf56C9e9cb16Ec63B0F9Ba94ad7'>traderjoexyz</a>
+          <p>|</p>
+          <a className='text-neutral hover-underline-animation cursor-pointer' onClick={addIconWallet}>add to Metamask</a>
         </div>
         <div className='fixed' style={{"transform": "rotate(20deg)", left: "-80px", bottom:"-80px"}}>
           <Image src="/landfill.png" alt="pile of trash"></Image>
